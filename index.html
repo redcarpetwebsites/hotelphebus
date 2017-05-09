@@ -11,13 +11,20 @@
   <link rel="stylesheet" href="owl-carousel/owl.carousel.css">
   <link rel="stylesheet" href="owl-carousel/owl.theme.css">
   <!-- CUSTOM STYLE -->
-  <link rel="stylesheet" href="css/yuki.css">
   <link rel="stylesheet" href="css/template-style.css">
+  <link rel="stylesheet" href="css/yuki.css">
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800&subset=latin,latin-ext' rel='stylesheet'
     type='text/css'>
   <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
   <script type="text/javascript" src="js/jquery-ui.min.js"></script>
   <script type="text/javascript" src="js/template-scripts.js"></script>
+  <script type="text/javascript" src="js/custom.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+    $(function () {
+      $("#datepicker").datepicker();
+    });
+  </script>
 </head>
 
 <body class="size-1140">
@@ -118,37 +125,23 @@
       <div class="line">
         <h1>N'attendez pas! Réserver tout de suite!</h1>
         <p>Vous pouvez réserver votre chambre immédiatement avec notre system se rendez-vous en ligne.</p>
-        <div class="s-12 m-4 l-2 center"><a class="white-btn" href="#contact">Reservez</a></div>
+        <div class="s-12 m-4 l-2 center"><a class="white-btn" href="#" id="share">Partager Notre Site</a></div>
       </div>
-    </div>
-    <!-- FEATURES -->
-    <div id="features">
       <div class="line">
-          <h2>Pour tous le monde</h2>
         <div class="margin">
-          <div class="s-12 m-6 l-3 margin-bottom">
-            <!--<img src="https://cdn3.iconfinder.com/data/icons/black-easy/512/538474-user_512x512.png" class="hide-on-small-only">-->
-            <h2>Chambre Double/Lits Jumeaux Standard</h2>
-            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
-              dolore magna aliquam erat volutpat.</p>
-          </div>
-          <div class="s-12 m-6 l-3 margin-bottom">
-            <!--<img src="https://cdn3.iconfinder.com/data/icons/black-easy/512/538474-user_512x512.png" class="hide-on-small-only">-->
-            <h2> Chambre Triple Standard</h2>
-            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
-              dolore magna aliquam erat volutpat adipiscing.</p>
-          </div>
-          <div class="s-12 m-6 l-3 margin-bottom">
-            <!--<img src="https://cdn3.iconfinder.com/data/icons/black-easy/512/538474-user_512x512.png" class="hide-on-small-only">-->
-            <h2>Chambre Quadruple Standard</h2>
-            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
-              dolore magna erat volutpat.</p>
-          </div>
-          <div class="s-12 m-6 l-3 margin-bottom">
-            <!--<img src="https://cdn3.iconfinder.com/data/icons/black-easy/512/538474-user_512x512.png" class="hide-on-small-only">-->
-            <h2> Chambre Simple Standard</h2>
-            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
-              dolore magna aliquam erat volutpat nonummy.</p>
+          <div class="s-12 m-12 l-12">
+            <h3 class="white-color">Réserver Tout de suite!</h3>
+            <form class="customform">
+              <div class="s-12"><input id="firstName" name="firstName" placeholder="Votre nom" title="Nom" type="text" required/></div>
+              <div class="s-12"><input id="lastName" name="lastName" placeholder="Votre prenom" title="Prenom" type="text" required /></div>
+              <div class="s-12"><input id="email" name="email" placeholder="Votre email" title="Email" type="email" required /></div>
+              <div class="s-12"><input id="phone" name="phone" placeholder="Votre Téléphone" title="Téléphone" type="text" required /></div>
+              <h3 class="white-color">Votre Séjour</h3>
+              <div class="s-12"><input id="date" name="date" placeholder="Date d'arrivée" title="Date d'arrivée" type="text" id="datepicker" required
+                /></div>
+              <div class="s-12"><input id="days" name="days" placeholder="Nombre de Jours" title="Nombre de Jours" type="number" required /></div>
+              <button id="reserver" class="white-btn" onclick="reserver()">Réserver</button>
+            </form>
           </div>
         </div>
       </div>
@@ -160,10 +153,10 @@
       </div>
       <article class="s-12 m-12 l-6">
         <h2>À votre service</h2>
-        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore
+        <!--<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore
           magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis
           nisl ut aliquip ex ea commodo consequat.
-        </p>
+        </p>-->
         <div class="about-us-icons">
           <i class="icon-paperplane_ico"></i> <i class="icon-trophy"></i> <i class="icon-clock"></i>
         </div>
@@ -218,7 +211,7 @@
                 </div>
                 <div class="s-12 m-6 l-3">
                   <a class="our-work-container lightbox margin-bottom">
-                    <img src="img/por3.jpg" class="img-icons" alt="">
+                    <img src="./img/IMG_3816.JPG" class="img-icons" alt="">
                   </a>
                 </div>
               </div>
@@ -285,8 +278,9 @@
         </div>
       </div>
     </div>
+
     <!-- LATEST NEWS -->
-    <div id="latest-news">
+    <!--<div id="latest-news">
       <div class="line">
         <h2 class="section-title">Latest News</h2>
         <div class="margin">
@@ -324,7 +318,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div>-->
     <!-- CONTACT -->
     <div id="contact">
       <div class="line">

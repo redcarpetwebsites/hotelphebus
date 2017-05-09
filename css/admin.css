@@ -1,0 +1,13 @@
+.sidemenu a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidemenu{
+    background-color: grey;
+    height :100%;
+}

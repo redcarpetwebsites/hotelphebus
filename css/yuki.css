@@ -1,3 +1,19 @@
 .img-icons {
 height:250px;
 }
+table {
+	font-size: 1em;
+}
+.white-color{
+    color: white;
+}
+
+.ui-datepicker{
+    background-color: white;
+    text-align: center;
+}
+
+.ui-datepicker-next,.ui-datepicker-prev {
+    margin-left: 32px;
+    margin-right: 32px;
+}

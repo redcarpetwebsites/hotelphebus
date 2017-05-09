@@ -1,0 +1,43 @@
+<html ng-app="app">
+
+<head>
+    <title>Administration</title>
+    <link href="./css/bootstrap.min.css" rel="stylesheet" />
+    <link href="./css/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="./css/admin.css" rel="stylesheet" />
+</head>
+
+<body ng-controller="AdminController">
+
+
+    <div class="row">
+        <div class="sidemenu col-xs-12 col-sm-12 col-md-2 col-lg-2">
+            <a href="#" ng-click="logout()">Logout</a>
+        </div>
+
+        <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10">
+            <table class="table table-striped">
+                <td>Nom</td>
+                <td>Prenom</td>
+                <td>Email</td>
+                <td>Telephone</td>
+                <td>Debut du sejour</td>
+                <td># Jours</td>
+                <td>Action</td>
+                <tr ng-repeat="r in reservation">
+                    <td>{{r.firstName}}</td>
+                    <td>{{r.lastName}}</td>
+                    <td>{{r.email}}</td>
+                    <td>{{r.phone}}</td>
+                    <td>{{r.date|date}}</td>
+                    <td>{{r.days}}</td>
+                    <td><button class="btn btn-primary" ng-click="remove(r.id)">Supprimer</button></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <script src="./js/angular.min.js"></script>
+    <script src="./js/ng.js"></script>
+</body>
+
+</html>
