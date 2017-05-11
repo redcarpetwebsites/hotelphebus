@@ -9,13 +9,15 @@
 
 <body ng-controller="AdminController">
 
-
     <div class="row">
-        <div class="sidemenu col-xs-12 col-sm-12 col-md-2 col-lg-2">
+        <div class="sidemenu hidden-xs hidden-sm col-md-2 col-lg-2">
             <a href="#" ng-click="logout()">Logout</a>
         </div>
 
         <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10">
+            <div class="hidden-md hidden-lg logout">
+                <a href="#" ng-click="logout()">Logout</a>
+            </div>
             <table class="table table-striped">
                 <td>Nom</td>
                 <td>Prenom</td>
