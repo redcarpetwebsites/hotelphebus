@@ -1,19 +1,45 @@
 .img-icons {
-height:250px;
+    height: 250px;
 }
+
 table {
-	font-size: 1em;
+    font-size: 1em;
 }
-.white-color{
+
+.white-color {
     color: white;
 }
 
-.ui-datepicker{
+.ui-datepicker {
     background-color: white;
     text-align: center;
 }
 
-.ui-datepicker-next,.ui-datepicker-prev {
+.ui-datepicker-next,
+.ui-datepicker-prev {
     margin-left: 32px;
     margin-right: 32px;
+}
+
+.form-input {
+    border-radius: 10px;
+    color: black;
+}
+
+@keyframes font-animation {
+    from {
+        font-size: 100%;
+        color: black;
+    }
+    to {
+        font-size: 110%;
+        color: darkblue;
+    }
+}
+
+.form-input:focus {
+    font-size: 110%;
+    color: darkblue;
+    animation-name: font-animation;
+    animation-duration: 0.25s;
 }

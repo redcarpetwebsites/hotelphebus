@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Responsive One Page website template</title>
+  <title>Hotel PHEBUS | Les Cotes De Carthage Gammarth Tunisie</title>
   <link rel="stylesheet" href="css/components.css">
   <link rel="stylesheet" href="css/responsee.css">
   <link rel="stylesheet" href="css/icons.css">
@@ -13,18 +13,14 @@
   <!-- CUSTOM STYLE -->
   <link rel="stylesheet" href="css/template-style.css">
   <link rel="stylesheet" href="css/yuki.css">
-  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800&subset=latin,latin-ext' rel='stylesheet'
-    type='text/css'>
+  <!--<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800&subset=latin,latin-ext' rel='stylesheet'
+    type='text/css'>-->
   <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
   <script type="text/javascript" src="js/jquery-ui.min.js"></script>
   <script type="text/javascript" src="js/template-scripts.js"></script>
   <script type="text/javascript" src="js/custom.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  <script>
-    $(function () {
-      $("#datepicker").datepicker();
-    });
-  </script>
+  
 </head>
 
 <body class="size-1140">
@@ -124,22 +120,22 @@
     <div id="first-block">
       <div class="line">
         <h1>N'attendez pas! Réserver tout de suite!</h1>
-        <p>Vous pouvez réserver votre chambre immédiatement avec notre system se rendez-vous en ligne.</p>
+        <p>Vous pouvez réserver votre chambre immédiatement avec notre system se réservation en ligne.</p>
         <div class="s-12 m-4 l-2 center"><a class="white-btn" href="#" id="share">Partager Notre Site</a></div>
       </div>
       <div class="line">
         <div class="margin">
-          <div class="s-12 m-12 l-12">
+          <div class="s-12 m-8 m-offset-2 l-8 l-offset-2">
             <h3 class="white-color">Réserver Tout de suite!</h3>
             <form class="customform">
-              <div class="s-12"><input id="firstName" name="firstName" placeholder="Votre nom" title="Nom" type="text" required/></div>
-              <div class="s-12"><input id="lastName" name="lastName" placeholder="Votre prenom" title="Prenom" type="text" required /></div>
-              <div class="s-12"><input id="email" name="email" placeholder="Votre email" title="Email" type="email" required /></div>
-              <div class="s-12"><input id="phone" name="phone" placeholder="Votre Téléphone" title="Téléphone" type="text" required /></div>
+              <div class="s-12"><input id="firstName" name="firstName" class="form-input" placeholder="Votre nom" title="Nom" type="text" required/></div>
+              <div class="s-12 "><input id="lastName" class="form-input"  name="lastName" placeholder="Votre prenom" title="Prenom" type="text" required /></div>
+              <div class="s-12 "><input id="email" class="form-input"  name="email" placeholder="Votre email" title="Email" type="email" required /></div>
+              <div class="s-12 "><input id="phone" class="form-input"  name="phone" placeholder="Votre Téléphone" title="Téléphone" type="text" required /></div>
               <h3 class="white-color">Votre Séjour</h3>
-              <div class="s-12"><input id="date" name="date" placeholder="Date d'arrivée" title="Date d'arrivée" type="text" id="datepicker" required
+              <div class="s-12 "><input id="date"  class="form-input" name="date" placeholder="Date d'arrivée" title="Date d'arrivée" type="date" id="datepicker" required
                 /></div>
-              <div class="s-12"><input id="days" name="days" placeholder="Nombre de Jours" title="Nombre de Jours" type="number" required /></div>
+              <div class="s-12 "><input id="days" class="form-input"  name="days" placeholder="Nombre de Jours" title="Nombre de Jours" type="number" required /></div>
               <button id="reserver" class="white-btn" onclick="reserver()">Réserver</button>
             </form>
           </div>
@@ -255,24 +251,18 @@
             <i class="icon-connected_object"></i>
             <div class="service-text">
               <h3>Wi-Fi Gratuite</h3>
-              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
-                dolore magna aliquam erat volutpat.</p>
             </div>
           </div>
           <div class="s-12 m-6 l-4 margin-bottom">
             <i class="">P</i>
             <div class="service-text">
               <h3>Parking Gratuit</h3>
-              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
-                dolore magna aliquam erat volutpat.</p>
             </div>
           </div>
           <div class="s-12 m-12 l-4 margin-bottom">
             <i class="icon-users"></i>
             <div class="service-text">
               <h3>Chambre Familiate</h3>
-              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
-                dolore magna aliquam erat volutpat.</p>
             </div>
           </div>
         </div>
@@ -399,6 +389,11 @@
       $(".prev-arrow").click(function () {
         theme_slider.trigger('owl.prev');
       })
+    });
+  </script>
+  <script>
+    $(function () {
+      $("#datepicker").datepicker();
     });
   </script>
 </body>
