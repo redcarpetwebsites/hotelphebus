@@ -41,7 +41,7 @@ $(function () {
         FB.ui({
             method: 'share',
             href: 'http://www.hotel-phebus.com/',
-        title: 'test',  // The same than name in feed method
+        title: 'Hotel Phebus', 
         picture: 'http://q-ec.bstatic.com/images/hotel/max1024x768/261/26173749.jpg',  
         description: 'Situé à La Marsa, dans le nord-est de la Tunisie, le Phebus Hotel Gammarth propose un hébergement 4 étoiles contemporain avec un balcon privé. Il possède 2 piscines dont une intérieure.',
         }, function (response) { });
