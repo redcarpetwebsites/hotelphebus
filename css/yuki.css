@@ -43,3 +43,10 @@ table {
     animation-name: font-animation;
     animation-duration: 0.25s;
 }
+
+.service-p{
+    text-align: center;
+    font-size: 20px;
+ 
+    
+}
