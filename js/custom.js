@@ -20,22 +20,6 @@ $(function () {
 });
 var counter = 5;
 $(function () {
-    $("#reserver").click(function () {
-        counter++;
-        var obj = {
-            id: counter,
-            firstName: $('#firstName').val(),
-            lastName: $('#lastName').val(),
-            email: $('#email').val(),
-            phone: $('#phone').val(),
-            date: $('#date').val(),
-            days: $('#days').val()
-
-        }
-        var res = JSON.parse(localStorage.getItem('phebus_reservation'));
-        res.push(obj);
-        localStorage.setItem('phebus_reservation', JSON.stringify(res));
-    });
     $("#share").click(function () {
         
         FB.ui({

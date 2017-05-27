@@ -26,6 +26,7 @@
     <script type="text/javascript" src="js/template-scripts.js"></script>
     <script type="text/javascript" src="js/custom.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://unpkg.com/vue"></script>
 
 
 </head>
@@ -265,26 +266,49 @@
         <!-- FIRST BLOCK -->
         <div id="reservation">
             <div class="line">
-                <div class="margin">
-                    <div class="s-12 m-8 m-offset-2 l-8 l-offset-2">
+                <div id="app" class="margin">
+                    <div class="s-12 m-8 l-8">
                         <h3 class="white-color">Réserver Tout de suite!</h3>
                         <form class="customform">
-                            <div class="s-12"><input id="firstName" name="firstName" class="form-input" placeholder="Votre nom" title="Nom"
+                            <div class="s-12"><input id="firstName" v-model="res.firstName" class="form-input" placeholder="Votre nom" title="Nom"
                                     type="text" required/></div>
-                            <div class="s-12 "><input id="lastName" class="form-input" name="lastName" placeholder="Votre prenom" title="Prenom"
+                            <div class="s-12 "><input id="lastName" class="form-input" v-model="res.lastName" placeholder="Votre prenom" title="Prenom"
                                     type="text" required /></div>
-                            <div class="s-12 "><input id="email" class="form-input" name="email" placeholder="Votre email" title="Email" type="email"
-                                    required /></div>
-                            <div class="s-12 "><input id="phone" class="form-input" name="phone" placeholder="Votre Téléphone" title="Téléphone"
+                            <div class="s-12 "><input id="email" class="form-input" v-model="res.email" placeholder="Votre email" title="Email"
+                                    type="email" required /></div>
+                            <div class="s-12 "><input id="phone" class="form-input" v-model="res.phone" placeholder="Votre Téléphone" title="Téléphone"
                                     type="text" required /></div>
                             <h3 class="white-color">Votre Séjour</h3>
-                            <div class="s-12 "><input id="date" class="form-input" name="date" placeholder="Date d'arrivée" title="Date d'arrivée"
+                            <div class="s-12 "><input id="date" class="form-input" v-model="res.date" placeholder="Date d'arrivée" title="Date d'arrivée"
                                     type="date" id="datepicker" required /></div>
-                            <div class="s-12 "><input id="days" class="form-input" name="days" placeholder="Nombre de Jours" title="Nombre de Jours"
+                            <div class="s-12 "><input id="days" class="form-input" v-model="res.days" placeholder="Nombre de Jours" title="Nombre de Jours"
                                     type="number" required /></div>
-                            <button id="reserver" class="white-btn" onclick="reserver()">Réserver</button>
                         </form>
                     </div>
+
+                    <div class="s-12 m-4 l-4">
+                        <h3 class="white-color">Tarif</h3>
+                        <div class="white-color">
+                            <form class="customform">
+                                <select v-model="res.number" type="number" class="form-input">
+                                    <option value=0>1 Personne</option>
+                                    <option value=1>2 Personne</option>
+                                    <option value=2>3 Personne</option>
+                                    <option value=3>4 Personne</option>
+                                </select>
+                                <select v-model="res.pension" type="number" class="form-input">
+                                    <option value="p">Petit-déjeuner compris</option>
+                                    <option value="pd">Petit-déjeuner et dîner compris</option>
+                                    <option value="pdd">Petit-déjeuner, déjeuner et dîner compris</option>
+                                </select>
+                                <h4 class="white-color"> Tarif : {{tarif}}</h4>
+                                <button class="white-btn" type="reset" v-on:click="reserver()">Réserver</button>
+                                </from>
+                        </div>
+                    </div>
+                    <script src="./js/vue-app.js">
+
+                    </script>
                 </div>
             </div>
         </div>

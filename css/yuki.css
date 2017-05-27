@@ -26,22 +26,10 @@ table {
     color: black;
 }
 
-@keyframes font-animation {
-    from {
-        font-size: 100%;
-        color: black;
-    }
-    to {
-        font-size: 110%;
-        color: darkblue;
-    }
-}
 
 .form-input:focus {
     font-size: 110%;
     color: darkblue;
-    animation-name: font-animation;
-    animation-duration: 0.25s;
 }
 
 .service-p{
