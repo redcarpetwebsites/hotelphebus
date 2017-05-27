@@ -46,7 +46,12 @@ table {
 
 .service-p{
     text-align: center;
-    font-size: 20px;
- 
+    font-size: 1.4em;
+    margin-top: 0.1em;
+    margin-bottom:0.1em;
     
+}
+
+#about-us img {
+    width:100%;
 }

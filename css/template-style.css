@@ -173,6 +173,22 @@ p.logo strong {
 	color: #6c7c84;
 	font-size: 0.85em;
 }
+
+#reservation {
+	background: none repeat scroll 0 0 #00283a;
+	padding: 3em 2em;
+	text-align: center;
+}
+#reservation h1 {
+	color: #fff;
+	font-size: 2em;
+	font-weight: 300;
+	margin-top: 0;
+}
+#reservation p {
+	color: #6c7c84;
+	font-size: 0.85em;
+}
 #features {
 	background: none repeat scroll 0 0 #fff;
 	box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
